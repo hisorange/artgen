@@ -54,7 +54,7 @@
     "@fastify/cors": "^8.0.0",
     "@fastify/formbody": "^7.3.0",
     "@fastify/passport": "^2.2.0",
-    "@fastify/secure-session": "^5.2.0",
+    "@fastify/secure-session": "^7.3.0",
     "@fastify/static": "^6.5.0",
     "@fastify/swagger": "^8.1.0",
     "@fastify/swagger-ui": "^1.1.0",
