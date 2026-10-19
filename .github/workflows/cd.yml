@@ -1,4 +1,4 @@
-name: 'CD'
+name: "CD"
 
 on:
   push:
@@ -7,6 +7,7 @@ on:
   pull_request:
     branches:
       - main
+  workflow_dispatch:
 
 jobs:
   check:
@@ -56,16 +57,13 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Install the interpreter
-        uses: actions/setup-node@v3
-        with:
-          node-version: 16.x
-          cache: yarn
+        uses: oven-sh/setup-bun@v2
 
       - name: Install development dependencies
-        run: yarn install --ignore-engines
+        run: bun install
 
       - name: Run tests (PostgreSQL)
-        run: yarn test
+        run: bun run test
         env:
           ARTGEN_DATABASE_DSN: postgres://artgen:artgen@localhost:5432/artgen
 
@@ -78,19 +76,16 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Install the interpreter
-        uses: actions/setup-node@v3
-        with:
-          node-version: 16.x
-          cache: yarn
+        uses: oven-sh/setup-bun@v2
 
       - name: Install development dependencies
-        run: yarn install --ignore-engines
+        run: bun install
 
       - name: Run type checking
-        run: yarn test:type
+        run: bun run test:type
 
       - name: Run tests (Common)
-        run: yarn test
+        run: bun run test
         env:
           ARTGEN_DATABASE_DSN: "sqlite::memory:"
 
@@ -107,16 +102,13 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Install the interpreter
-        uses: actions/setup-node@v3
-        with:
-          node-version: 16.x
-          cache: yarn
+        uses: oven-sh/setup-bun@v2
 
       - name: Install development dependencies
-        run: yarn install --ignore-engines
+        run: bun install
 
       - name: Run build
-        run: yarn build
+        run: bun run build
 
       - name: Publish to NPM
         uses: JS-DevTools/npm-publish@v1
@@ -129,7 +121,7 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           check-version: false
-          registry: 'https://npm.pkg.github.com'
+          registry: "https://npm.pkg.github.com"
 
   release-docker:
     name: Docker release
@@ -156,7 +148,6 @@ jobs:
           push: true
           # platforms: linux/amd64,linux/arm64
           tags: artgenio/core:latest,artgenio/core:${{ needs.check.outputs.version }}
-
 
   release-gh:
     name: GitHub release
@@ -196,7 +187,6 @@ jobs:
     outputs:
       upload_url: ${{ steps.release.outputs.upload_url }}
       url: ${{ steps.release.outputs.url }}
-
 
   # # The demo is the latest released version
   # deploy-demo:

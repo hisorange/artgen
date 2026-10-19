@@ -1,6 +1,6 @@
 {
   "name": "@artgenio/core",
-  "version": "0.7.1",
+  "version": "0.8.0",
   "description": "Next generation, Headless CMS with No Code engine",
   "keywords": [
     "headless-cms",
@@ -13,24 +13,23 @@
     "react"
   ],
   "main": "build/main.js",
-  "homepage": "https://artgen.io",
+  "homepage": "https://1sys.eu",
   "license": "GPL-3.0",
   "type": "module",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/artgenio/core.git"
+    "url": "git+https://github.com/hisorange/artgen.git"
   },
   "bugs": {
-    "url": "https://github.com/artgenio/core/issues"
+    "url": "https://github.com/hisorange/artgen/issues"
   },
   "author": {
     "name": "Varga Zsolt",
-    "email": "hello@hisorange.me",
-    "url": "https://hisorange.me"
+    "email": "z@1sys.eu",
+    "url": "https://1sys.eu"
   },
   "engines": {
-    "node": ">=12.x",
-    "yarn": "1.x"
+    "node": ">=20.x"
   },
   "scripts": {
     "build:docker": "docker build . --target=production -t artgenio/core:dev",
@@ -60,8 +59,8 @@
     "@fastify/swagger-ui": "^1.1.0",
     "@fastify/view": "^7.1.1",
     "@hisorange/kernel": "^1.4.0",
-    "@loopback/context": "^5.0.4",
-    "@loopback/metadata": "^5.0.4",
+    "@loopback/context": "^6.0.0",
+    "@loopback/metadata": "^6.0.0",
     "ajv": "^8.6.3",
     "axios": "^1.1.3",
     "bcrypt": "^5.0.1",
