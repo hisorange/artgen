@@ -826,12 +826,12 @@
     ajv-formats "^2.1.1"
     fast-uri "^2.0.0"
 
-"@fastify/cookie@^7.0.0":
-  version "7.4.0"
-  resolved "https://registry.yarnpkg.com/@fastify/cookie/-/cookie-7.4.0.tgz#a4782e24a0d230547d4c14f1dbbc13bcfc5dc52d"
-  integrity sha512-82MUHsZJY/Wl+rG2E+bnYxSifOtNRChm2M+8xnZHnKtYmyNfLvy/37ElCtqD3KzUyTycR+GE7v7uiDD/tY4TkA==
+"@fastify/cookie@^9.0.4":
+  version "9.3.1"
+  resolved "https://registry.yarnpkg.com/@fastify/cookie/-/cookie-9.3.1.tgz#48b89a356a23860c666e2fe522a084cc5c943d33"
+  integrity sha512-h1NAEhB266+ZbZ0e9qUE6NnNR07i7DnNXWG9VbbZ8uC6O/hxHpl+Zoe5sw1yfdZ2U6XhToUGDnzQtWJdCaPwfg==
   dependencies:
-    cookie "^0.5.0"
+    cookie-signature "^1.1.0"
     fastify-plugin "^4.0.0"
 
 "@fastify/cors@^8.0.0":
@@ -882,14 +882,14 @@
     "@fastify/flash" "^5.0.0"
     fastify-plugin "^4.0.0"
 
-"@fastify/secure-session@^5.2.0":
-  version "5.2.0"
-  resolved "https://registry.yarnpkg.com/@fastify/secure-session/-/secure-session-5.2.0.tgz#482a0ab003a644de079d08562aeac79dd81449c4"
-  integrity sha512-oRWKdHwWUzp4rsJ3GnR8w8doE+7vllWMtohBVp77bENkhm4/OvofaO6PJLJuQvKF7XJAKiGip29dX1RsllKT7g==
+"@fastify/secure-session@^7.3.0":
+  version "7.3.0"
+  resolved "https://registry.yarnpkg.com/@fastify/secure-session/-/secure-session-7.3.0.tgz#f6cbb1ebd9aef9cf9e561e4eaa74ccdfa5d45a43"
+  integrity sha512-9d7CMZ2OrOVsrWtkCf60weyfhQcscrnboUdnETMAAhEyUXrZtO66Zu99DH/g/VfGW1mUU5tKHq7jCkm+itvDWA==
   dependencies:
-    "@fastify/cookie" "^7.0.0"
-    fastify-plugin "^3.0.0"
-    sodium-native "^3.0.0"
+    "@fastify/cookie" "^9.0.4"
+    fastify-plugin "^4.0.0"
+    sodium-native "^4.0.0"
 
 "@fastify/static@^6.0.0", "@fastify/static@^6.5.0":
   version "6.5.1"
@@ -3257,6 +3257,11 @@ convert-source-map@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/convert-source-map/-/convert-source-map-2.0.0.tgz#4b560f649fc4e918dd0ab75cf4961e8bc882d82a"
   integrity sha512-Kvp459HrV2FEJ1CAsi1Ku+MY3kasH19TFykTz2xWmMeq6bk2NU3XXvfJ+Q61m0xktWwt+1HSYf3JZsTms3aRJg==
+
+cookie-signature@^1.1.0:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/cookie-signature/-/cookie-signature-1.2.1.tgz#790dea2cce64638c7ae04d9fabed193bd7ccf3b4"
+  integrity sha512-78KWk9T26NhzXtuL26cIJ8/qNHANyJ/ZYrmEXFzUmhZdjpBv+DlWlOANRTGBt48YcyslsLrj0bMLFTmXvLRCOw==
 
 cookie@^0.5.0:
   version "0.5.0"
@@ -6179,10 +6184,10 @@ node-fetch@2.6.7, node-fetch@^2.6.1, node-fetch@^2.6.7:
   dependencies:
     whatwg-url "^5.0.0"
 
-node-gyp-build@^4.3.0:
-  version "4.5.0"
-  resolved "https://registry.yarnpkg.com/node-gyp-build/-/node-gyp-build-4.5.0.tgz#7a64eefa0b21112f89f58379da128ac177f20e40"
-  integrity sha512-2iGbaQBV+ITgCz76ZEjmhUKAKVf7xfY1sRl4UiKQspfZMH2h06SyhNsnSVy50cwkFQDGLyif6m/6uFXHkOZ6rg==
+node-gyp-build@^4.8.0:
+  version "4.8.0"
+  resolved "https://registry.yarnpkg.com/node-gyp-build/-/node-gyp-build-4.8.0.tgz#3fee9c1731df4581a3f9ead74664369ff00d26dd"
+  integrity sha512-u6fs2AEUljNho3EYTJNBfImO5QTo/J/1Etd+NVdCj7qWKUSN/bSLkZwhDv7I+w/MSC6qJ4cknepkAYykDdK8og==
 
 node-gyp@8.x:
   version "8.4.1"
@@ -7961,12 +7966,12 @@ socks@^2.6.2:
     ip "^2.0.0"
     smart-buffer "^4.2.0"
 
-sodium-native@^3.0.0:
-  version "3.4.1"
-  resolved "https://registry.yarnpkg.com/sodium-native/-/sodium-native-3.4.1.tgz#44616c07ccecea15195f553af88b3e574b659741"
-  integrity sha512-PaNN/roiFWzVVTL6OqjzYct38NSXewdl2wz8SRB51Br/MLIJPrbM3XexhVWkq7D3UWMysfrhKVf1v1phZq6MeQ==
+sodium-native@^4.0.0:
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/sodium-native/-/sodium-native-4.1.1.tgz#109bc924dd55c13db87c6dd30da047487595723c"
+  integrity sha512-LXkAfRd4FHtkQS4X6g+nRcVaN7mWVNepV06phIsC6+IZFvGh1voW5TNQiQp2twVaMf05gZqQjuS+uWLM6gHhNQ==
   dependencies:
-    node-gyp-build "^4.3.0"
+    node-gyp-build "^4.8.0"
 
 sonic-boom@^3.1.0:
   version "3.2.0"
